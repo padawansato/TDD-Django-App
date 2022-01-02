@@ -13,10 +13,14 @@ services:
   #   command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
   web:
     build: .
+    shm_size: '3g'
     # command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
       - "8000:8000"
+      # - "4444:4444"
+      # - "5901:5900"
+      # - "7900:7900"
     # depends_on:
     #   - db
