@@ -1,16 +1,17 @@
 from unittest.main import main
 from selenium import webdriver
-#Optionsクラスのインポート（ヘッドレスの設定をするため）
+# Optionsクラスのインポート（ヘッドレスの設定をするため）
 from selenium.webdriver.chrome.options import Options
 import unittest
 
+
 class NewVisitorTest(unittest.TestCase):
     def setUp(self) -> None:
-        #Optionsのインスタンスを生成（変数optionsに格納）
+        # Optionsのインスタンスを生成（変数optionsに格納）
         self.options = Options()
-        #headlessの設定をTrueにする
+        # headlessの設定をTrueにする
         self.options.headless = True
-        #webdriverの起動
+        # webdriverの起動
         self.browser = webdriver.Chrome(options=self.options)
 
     def tearDown(self):
@@ -46,6 +47,7 @@ class NewVisitorTest(unittest.TestCase):
         # (その説明文が表示されている。)
 
         # 満足した彼女は眠りにつく。
+
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')

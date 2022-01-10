@@ -148,3 +148,4 @@ geckodriver
 geckodriver-v0.30.0-linux64.tar
 googleversion.py
 db.sqlite3
+.vscode
